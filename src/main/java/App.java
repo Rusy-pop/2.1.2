@@ -1,3 +1,4 @@
+import Entity.Cat;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
@@ -15,9 +16,9 @@ public class App {
         System.out.println(bean == bean2);
 
         Cat cat =
-                (Cat) applicationContext.getBean("cat");
+                applicationContext.getBean("cat", Cat.class);
         Cat cat1 =
-                (Cat) applicationContext.getBean("cat");
+                applicationContext.getBean("cat", Cat.class);
         System.out.println(cat == cat1);
 
 

@@ -1,3 +1,4 @@
+import Entity.Cat;
 import org.junit.Assert;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,6 +26,6 @@ public class AppTest {
         Cat two = applicationContext.getBean(Cat.class);
 
         Assert.assertSame("Тест провален, не корректная настройка бина HelloWorld", tree, leaf);
-        Assert.assertNotSame("Тест провален, не корректная настройка бина Cat", one, two);
+        Assert.assertNotSame("Тест провален, не корректная настройка бина Entity.Cat", one, two);
     }
 }
